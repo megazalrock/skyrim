@@ -1,0 +1,277 @@
+[
+    {
+        "ja": "Cure Disease",
+        "eng": "疾病退散",
+        "type": "other"
+    },
+    {
+        "ja": "Damage Health",
+        "eng": "体力減退",
+        "type": "damage"
+    },
+    {
+        "ja": "Damage Magicka",
+        "eng": "マジカ減退",
+        "type": "damage"
+    },
+    {
+        "ja": "Damage Magicka Regen",
+        "eng": "マジカ回復減退",
+        "type": "damage"
+    },
+    {
+        "ja": "Damage Stamina",
+        "eng": "スタミナ減退",
+        "type": "damage"
+    },
+    {
+        "ja": "Damage Stamina Regen",
+        "eng": "スタミナ減退回復",
+        "type": "damage"
+    },
+    {
+        "ja": "Fear",
+        "eng": "恐怖",
+        "type": "other"
+    },
+    {
+        "ja": "Fortify Alteration",
+        "eng": "変性上昇",
+        "type": "fortify"
+    },
+    {
+        "ja": "Fortify Barter",
+        "eng": "交渉上昇",
+        "type": "fortify"
+    },
+    {
+        "ja": "Fortify Block",
+        "eng": "防御上昇",
+        "type": "fortify"
+    },
+    {
+        "ja": "Fortify Carry Weight",
+        "eng": "持ち運び重量上昇",
+        "type": "fortify"
+    },
+    {
+        "ja": "Fortify Conjuration",
+        "eng": "召喚上昇",
+        "type": "fortify"
+    },
+    {
+        "ja": "Fortify Destruction",
+        "eng": "破壊上昇",
+        "type": "fortify"
+    },
+    {
+        "ja": "Fortify Enchanting",
+        "eng": "付呪上昇",
+        "type": "fortify"
+    },
+    {
+        "ja": "Fortify Health",
+        "eng": "体力上昇",
+        "type": "fortify"
+    },
+    {
+        "ja": "Fortify Heavy Armor",
+        "eng": "重装上昇",
+        "type": "fortify"
+    },
+    {
+        "ja": "Fortify Illusion",
+        "eng": "幻惑上昇",
+        "type": "fortify"
+    },
+    {
+        "ja": "Fortify Light Armor",
+        "eng": "軽装上昇",
+        "type": "fortify"
+    },
+    {
+        "ja": "Fortify Lockpicking",
+        "eng": "開錠術上昇",
+        "type": "fortify"
+    },
+    {
+        "ja": "Fortify Magicka",
+        "eng": "マジカ上昇",
+        "type": "fortify"
+    },
+    {
+        "ja": "Fortify Marksman",
+        "eng": "弓術上昇",
+        "type": "fortify"
+    },
+    {
+        "ja": "Fortify One-handed",
+        "eng": "片手武器上昇",
+        "type": "fortify"
+    },
+    {
+        "ja": "Fortify Pickpocket",
+        "eng": "スリ上昇",
+        "type": "fortify"
+    },
+    {
+        "ja": "Fortify Restoration",
+        "eng": "回復上昇",
+        "type": "fortify"
+    },
+    {
+        "ja": "Fortify Smithing",
+        "eng": "鍛治上昇",
+        "type": "fortify"
+    },
+    {
+        "ja": "Fortify Sneak",
+        "eng": "隠密上昇",
+        "type": "fortify"
+    },
+    {
+        "ja": "Fortify Stamina",
+        "eng": "スタミナ上昇",
+        "type": "fortify"
+    },
+    {
+        "ja": "Fortify Two-handed",
+        "eng": "両手武器上昇",
+        "type": "fortify"
+    },
+    {
+        "ja": "Frenzy",
+        "eng": "錯乱",
+        "type": "other"
+    },
+    {
+        "ja": "Invisibility",
+        "eng": "透明化",
+        "type": "other"
+    },
+    {
+        "ja": "Lingering Damage Health",
+        "eng": "体力減退(残存)",
+        "type": "lingering_damage"
+    },
+    {
+        "ja": "Lingering Damage Magicka",
+        "eng": "マジカ減退(残存)",
+        "type": "lingering_damage"
+    },
+    {
+        "ja": "Lingering Damage Stamina",
+        "eng": "スタミナ減退(残存)",
+        "type": "lingering_damage"
+    },
+    {
+        "ja": "Paralysis",
+        "eng": "麻痺",
+        "type": "other"
+    },
+    {
+        "ja": "Ravage Health",
+        "eng": "体力破壊",
+        "type": "ravage"
+    },
+    {
+        "ja": "Ravage Magicka",
+        "eng": "マジカ破壊",
+        "type": "ravage"
+    },
+    {
+        "ja": "Ravage Stamina",
+        "eng": "スタミナ破壊",
+        "type": "ravage"
+    },
+    {
+        "ja": "Regenerate Health",
+        "eng": "体力を治癒",
+        "type": "regenerate"
+    },
+    {
+        "ja": "Regenerate Magicka",
+        "eng": "マジカを回復",
+        "type": "regenerate"
+    },
+    {
+        "ja": "Regenerate Stamina",
+        "eng": "スタミナを回復",
+        "type": "regenerate"
+    },
+    {
+        "ja": "Resist Fire",
+        "eng": "炎耐性",
+        "type": "resist"
+    },
+    {
+        "ja": "Resist Frost",
+        "eng": "冷気耐性",
+        "type": "resist"
+    },
+    {
+        "ja": "Resist Magic",
+        "eng": "魔法耐性",
+        "type": "resist"
+    },
+    {
+        "ja": "Resist Poison",
+        "eng": "毒耐性",
+        "type": "resist"
+    },
+    {
+        "ja": "Resist Shock",
+        "eng": "雷撃耐性",
+        "type": "resist"
+    },
+    {
+        "ja": "Restore Health",
+        "eng": "体力治癒",
+        "type": "restore"
+    },
+    {
+        "ja": "Restore Magicka",
+        "eng": "マジカ回復",
+        "type": "restore"
+    },
+    {
+        "ja": "Restore Stamina",
+        "eng": "スタミナ回復",
+        "type": "restore"
+    },
+    {
+        "ja": "Slow",
+        "eng": "減速",
+        "type": "other"
+    },
+    {
+        "ja": "Waterbreathing",
+        "eng": "水中呼吸",
+        "type": "other"
+    },
+    {
+        "ja": "Weakness to Fire",
+        "eng": "炎耐性ダウン",
+        "type": "weakness"
+    },
+    {
+        "ja": "Weakness to Frost",
+        "eng": "冷気耐性ダウン",
+        "type": "weakness"
+    },
+    {
+        "ja": "Weakness to Magic",
+        "eng": "魔法耐性ダウン",
+        "type": "weakness"
+    },
+    {
+        "ja": "Weakness to Poison",
+        "eng": "毒耐性ダウン",
+        "type": "weakness"
+    },
+    {
+        "ja": "Weakness to Shock",
+        "eng": "雷撃耐性ダウン",
+        "type": "weakness"
+    }
+]

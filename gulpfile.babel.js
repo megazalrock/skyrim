@@ -26,16 +26,14 @@ var dirnameRegExp = new RegExp(__dirname + '/', 'g');
 const setting = {
 	js :{
 		srcDir : 'src/js',
-		distDir: 'dist/js',
+		distDir: 'htdocs/js',
 		targets: [
-			'background',
-			'tab_script',
-			'content_script'
+			'main'
 		]
 	},
 	css: {
 		srcDir: 'src/css',
-		distDir: 'dist/css',
+		distDir: 'htdocs/css',
 		targets: [
 			'main'
 		]
