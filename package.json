@@ -4,9 +4,13 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "i18next": "^3.4.1",
+    "i18next-browser-languagedetector": "^1.0.0",
+    "i18next-xhr-backend": "^1.1.0",
     "lodash": "^4.13.1",
     "react": "^15.3.0",
     "react-dom": "^15.3.0",
+    "react-i18next": "^1.8.0",
     "superagent": "^2.0.0",
     "superagent-jsonp": "^0.1.0"
   },
