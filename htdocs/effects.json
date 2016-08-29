@@ -6,20 +6,25 @@
 			"Paralysis",
 			"Slow"
 		],
-		"Damage": [
-			"Lingering Damage Health",
-			"Lingering Damage Magicka",
-			"Lingering Damage Stamina",
-			"Ravage Health",
-			"Ravage Magicka",
-			"Ravage Stamina"
-		],
 		"Weakness": [
 			"Weakness to Fire",
 			"Weakness to Frost",
 			"Weakness to Magic",
 			"Weakness to Poison",
 			"Weakness to Shock"
+		],
+		"Damage": [
+			"Lingering Damage Health",
+			"Lingering Damage Magicka",
+			"Lingering Damage Stamina",
+			"Ravage Health",
+			"Ravage Magicka",
+			"Ravage Stamina",
+			"Damage Health",
+			"Damage Magicka",
+			"Damage Magicka Regen",
+			"Damage Stamina",
+			"Damage Stamina Regen"
 		]
 	},
 	"Potion": {
@@ -27,6 +32,21 @@
 			"Invisibility",
 			"Cure Disease",
 			"Waterbreathing"
+		],
+		"Resist": [
+			"Resist Fire",
+			"Resist Frost",
+			"Resist Magic",
+			"Resist Poison",
+			"Resist Shock"
+		],
+		"Recovery": [
+			"Regenerate Health",
+			"Regenerate Magicka",
+			"Regenerate Stamina",
+			"Restore Health",
+			"Restore Magicka",
+			"Restore Stamina"
 		],
 		"Fortify": [
 			"Fortify Alteration",
@@ -50,21 +70,6 @@
 			"Fortify Sneak",
 			"Fortify Stamina",
 			"Fortify Two-Handed"
-		],
-		"Recovery ": [
-			"Regenerate Health",
-			"Regenerate Magicka",
-			"Regenerate Stamina",
-			"Restore Health",
-			"Restore Magicka",
-			"Restore Stamina"
-		],
-		"Resist": [
-			"Resist Fire",
-			"Resist Frost",
-			"Resist Magic",
-			"Resist Poison",
-			"Resist Shock"
 		]
 	}
 }

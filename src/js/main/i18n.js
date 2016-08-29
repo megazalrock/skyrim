@@ -12,6 +12,7 @@ i18n
 		keySeparator: false,
 		nsSeparator: false,
 		ns: ['common'],
+		load: 'languageOnly',
 		defaultNs: 'common',
 		interpolation: {
 			escapeValue: false

@@ -2,7 +2,13 @@
 	"Dawnguard": "ドーンガード",
 	"Hearthfire": "ハースファイア",
 	"Dragonborn": "ドラゴンボーン",
-	"ui": {
-		"Search": "検索"
-	}
+	"Deselect All": "全て選択解除",
+	"Not applicable": "該当なし",
+	"Name": "素材",
+	"Primary Effect": "効果1",
+	"Secondary Effect": "効果2",
+	"Tertiary Effect": "効果3",
+	"Quaternary Effect": "効果4",
+	"Weight": "重さ",
+	"Value": "価格"
 }
