@@ -2,18 +2,27 @@
 
 @contentsMaxWidth: 1200px;
 
-@baseMargin: 0.5em;
+@baseMargin: 0.5rem;
 
 @baesFontSize: 16px;
 @fontSize12: 0.75rem;
 
-@themeColor: #0D2027;
+/*@themeColor: #0D2027;
 @accentColor1: #7E80AA;
-@accentColor2: #6A3420;
-@color3: #111D11;
+@accentColor2: #6A3420;*/
+@themeColor1: #270d0d;
+@themeColor2: #0D2027;
+@accentColor1: #777;
+@accentColor2: #454545;
 @baseBg: #0E0F0B;
 
+@baseColor: #F0F0F0;
+
 @spBreakPoint: 375px;
+
+html,body{
+	//height: 100%;
+}
 
 html{
 	font-size: @baesFontSize;
@@ -23,18 +32,33 @@ html{
 }
 body{
 	background: @baseBg;
-	color: #F0F0F0;
+	color: @baseColor;
 }
 
 .buttonBg(){
 	user-select: none;
 	cursor: pointer;
+	position: relative;
+	filter: brightness(0.7);
+	color: #EEE;
+	background: @accentColor2;
 	&.selected{
-		background: rgba(255, 255, 255, 0.7);
-		color: #000;
+		//color: #000;
+		filter: none;
+		font-weight: bold;
+		box-sizing: border-box;
+		/*&:after{
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			//background: rgba(255, 255, 255, 0.5);
+		}*/
 	}
 	&:active{
-		background: rgba(255, 255, 255, 0.3);
+	filter: brightness(0.85);
 	}
 }
 
@@ -45,6 +69,90 @@ body{
 	padding: 0 5px;
 	box-sizing: border-box;
 }
+
+.effectColor(){	
+	@healthColor: #FF0000;
+	@magickaColor: #0000FF;
+	@staminaColor: #006600;
+
+	@restoreBgColor: #cc9466;
+	@efficacyBgColor: #cc6666;
+	@registBgColor: #ccc266;
+	@fortifyBgColor: #a8cc66;
+	@regenerateBgColor: #7acc66;
+
+	@ravageBgColor: #66cccc;
+	@lingeringDamageBgColor: #669ecc;
+	@weaknessBgColor: #6670cc;
+	@damageBgColor: #8a66cc;
+	@damageRegen: #b866cc;
+
+	@recovery: #FFF;
+	color: @baseBg;
+	.bgGradient(@color){
+		@pos: 15%;
+		@midColor: lighten(@color, 30%);
+		background: @color;
+		background: linear-gradient(@color @pos, @midColor @pos, @midColor (100% - @pos), @color (100% - @pos));
+	}
+	&.health,
+	&.magicka,
+	&.stamina{
+		//font-weight: bold;
+	}
+	&.health{
+		color: @healthColor;
+	}
+	&.magicka{
+		color: @magickaColor;
+	}
+	&.stamina{
+		color: @staminaColor;
+	}
+	&.restore{
+		.bgGradient(@restoreBgColor);
+	}
+	&.resist{
+		.bgGradient(@registBgColor);
+	}
+	&.fortify{
+		.bgGradient(@fortifyBgColor);
+	}
+	&.ravage{
+		.bgGradient(@ravageBgColor);
+	}
+	&.damage{
+		.bgGradient(@damageBgColor);
+	}
+	&.regen{
+		.bgGradient(@regenerateBgColor);
+	}
+
+	&.lingering_damage{
+		.bgGradient(@lingeringDamageBgColor);
+	}
+	&.weakness{
+		.bgGradient(@weaknessBgColor);
+	}
+	&.efficacy{
+		.bgGradient(@efficacyBgColor);
+	}
+	&.recovery{
+		.bgGradient(@recovery);
+	}
+	&.damage.regen{
+		.bgGradient(@damageRegen);
+	}
+	&.fortify{
+		&.health,
+		&.magicka,
+		&.stamina{
+			color: @baseBg;
+			font-weight: normal;
+		}
+	}
+}
+
 
 .main{
 	max-width: @contentsMaxWidth;
@@ -59,6 +167,7 @@ body{
 			display: inline-block;
 			width: 33.3%;
 			text-align: center;
+			box-sizing: border-box;
 			//background: @accentColor2;
 		}
 	}
@@ -69,6 +178,7 @@ body{
 	font-size: 12px;
 	display: flex;
 	flex-wrap: wrap;
+	width: 100%;
 	&:after{
 		content: '';
 		display: block;
@@ -83,61 +193,78 @@ body{
 				padding-right: 0;
 			}
 		}
+
+		@media screen and (max-width: @spBreakPoint) {
+		}
+
 		h3{
 			font-size: 1rem;
 			text-align: center;
 			height: 32px;
 			line-height: 32px;
+			margin-bottom: -@baseMargin;
 		}
+		&.potion h3{
+			background: @themeColor1;
+		}
+		&.poison h3{
+			background: @themeColor2;
+		}
+
 		.categories{
 			display:flex;
 			flex-wrap: wrap;
+			width: 100%;
 			@media screen and (min-width: (@contentsMaxWidth - 1px)) {
 				height: ~"calc(100% - 32px)";
 			}
 			.category{
-				min-width: 187.5px;
-				flex: 3 1 20%;
+				@border: 1px solid @baseBg;
+				flex: 3 1 33%;
 				margin-bottom: 1px;
+				border-right: @border;
+				box-sizing: border-box;
 				h4{
 					width: 100%;
-					padding: @baseMargin 0;
+					padding: @baseMargin / 2 0;
 					text-align: center;
 					position: relative;
-					@border: 1px solid @color3;
-					border-bottom: @border;
+					background: @accentColor1;
+					margin-top: @baseMargin;
 				}
 				ul{
 					display:flex;
 					flex-wrap: wrap;
 					justify-content: space-around;
+					color: @baseBg;
 					li{
 						.button();
+						.effectColor();
+						min-width: 75px;
+						flex-grow: 2;
+						flex-shrink: 2;
+						text-wrap: none;
 						display: inline-block;
 						text-align: center;
+						margin-top: 1px;
+						margin-right: auto;
 						&:last-child{
 							margin-right: 0;
 						}
 					}
 				}
 				&.fortify,
-				&.damage,
-				&.weakness{
-					flex-grow: 2;
+				&.damage{
+					//flex-basis: 50%;
+					//flex-grow: 1;
 				}
-				
+
+
+
 				@media screen and (max-width: @spBreakPoint) {
-					&.fortify{
-						order: 1;
+					&.damage{
+						flex: 1 1 100%;
 					}
-				}
-
-
-				&:nth-child(odd){
-					background: darken(@accentColor1, 5%);
-				}
-				&:nth-child(even){
-					background: darken(@accentColor2, 5%);
 				}
 			}
 		}
@@ -177,16 +304,23 @@ body{
 
 .ingredientsTable{
 	width: 100%;
-	@border: 1px solid #666;
+	@border: 1px solid @baseBg;
 	th,td{
-		padding: 5px 2px;
+		padding: 2px 5px;
+		box-sizing: border-box;
 	}
 	th{
 		border-right: @border;
+	}	
+	td.weight,
+	td.value{
+		width: 3em;
+		text-align: center;
 	}
 	thead{
-		background: @color3;
+		background: @accentColor1;
 		font-size: @fontSize12;
+		border-bottom: 1px solid @baseBg;
 	}
 	tbody{
 		tr{
@@ -196,168 +330,60 @@ body{
 		td{
 			line-height: 1.5;
 			padding: 5px 2px;
+			border-right: @border;
 		}
 		th{
 			font-weight: normal;
+			width: 33.3%;
+		}
+		td{
+			font-size: @fontSize12;
+			text-align: center;
+		}
+
+		@media screen and (max-width: @spBreakPoint) {
+			th{
+				width: 25%;
+			}
+			td{
+				width: 18.75%;
+			}
 		}
 		td.effect{
 			.buttonBg();
+			.effectColor();
+			line-height: 1.2;
 		}
 	}
 	@media screen and (max-width: (@contentsMaxWidth - 1px)) {
+		td{
+			line-height: 1.2;
+		}
 		td.weight,
 		td.value{
 			display: none;
 		}
 	}	
 }
-
-@healthColor: #AA0000;
-@magickaColor: #0000AA;
-@staminaColor: #006600;
-
-@restoreBgColor: #00DDFF;
-@regenerateBgColor: #6699FF;
-
-@registBgColor: #99FF99;
-@fortifyBgColor: #CCDDCC;
-
-@ravageBgColor: #FF6666;
-@damageBgColor: #FFFF66;
-@lingeringDamageBgColor: #FF9900;
-
-@weaknessBgColor: #FF99CC;
-@effectBgColor: #999999;
-
-.ravage.health,
-.ravage.stamina,
-.ravage.magicka,
-.damage.stamina.regen,
-.damage.magicka.regen,
-.lingering.damage.health,
-.lingering.damage.stamina,
-.lingering.damage.magicka,
-.damage.health,
-.damage.stamina,
-.damage.magicka,
-.restore.health,
-.restore.magicka,
-.restore.stamina,
-.regenerate.health,
-.regenerate.magicka,
-.regenerate.stamina,{
-	font-weight: bold;
+.effectsBox,
+.ingredientsBox{
+	width: 100%;
+	overflow: hidden;
+	.messeage{
+		position: static;
+	}
 }
 
-
-
-
-.restore_health {background-color:#00DDFF; color:#AA0000;font-weight:bold;}
-.restore_magicka {background-color:#00DDFF; color:#0000AA;font-weight:bold;}
-.restore_stamina {background-color:#00DDFF; color:#006600;font-weight:bold;}
-.regenerate_health {background-color:#6699FF; color:#AA0000;font-weight:bold;}
-.regenerate_magicka {background-color:#6699FF; color:#0000AA;font-weight:bold;}
-.regenerate_stamina {background-color:#6699FF; color:#006600;font-weight:bold;}
-
-.resist_magic,
-.resist_fire,
-.resist_poison,
-.resist_shock,
-.resist_frost {background-color:#99FF99;}
-/*.resist_fire {}
-.resist_poison {}
-.resist_shock {}
-.resist_frost {}*/
-
-
-.fortify_sneak,
-.fortify_restoration,
-.fortify_one_handed,
-.fortify_destruction,
-.fortify_carry_weight,
-.fortify_magicka,
-.fortify_marksman ,
-.fortify_pickpocket,
-.fortify_health,
-.fortify_lockpicking,
-.fortify_alteration,
-.fortify_heavy_armor,
-.fortify_smithing,
-.fortify_stamina,
-.fortify_light_armor,
-.fortify_illusion,
-.fortify_enchanting,
-.fortify_block,
-.fortify_barter,
-.fortify_two_handed,
-.fortify_conjuration  {background-color:#CCDDCC;}
-
-
-/* .fortify_restoration {}
-.fortify_one_handed {}
-.fortify_destruction {}
-.fortify_carry_weight {}
-.fortify_magicka {}
-.fortify_marksman {}
-.fortify_pickpocket {}
-.fortify_health {}
-.fortify_lockpicking {}
-.fortify_alteration {}
-.fortify_heavy_armor {}
-.fortify_smithing {}
-.fortify_stamina {}
-.fortify_light_armor {}
-.fortify_illusion {}
-.fortify_enchanting {}
-.fortify_block {}
-.fortify_barter {}
-.fortify_two_handed {}
-.fortify_conjuration {} */
-
-
-
-.ravage_health {background-color:#FF6666; color:#AA0000;font-weight:bold;}
-.ravage_stamina {background-color:#FF6666; color:#006600;font-weight:bold;}
-.ravage_magicka {background-color:#FF6666; color:#0000AA;font-weight:bold;}
-.damage_stamina_regen {background-color:#FFFF66; color:#006600;font-weight:bold;}
-.damage_magicka_regen {background-color:#FFFF66; color:#0000AA;font-weight:bold;}
-
-.lingering_damage_health {background-color:#FF9900; color:#AA0000;font-weight:bold;}
-.lingering_damage_stamina {background-color:#FF9900; color:#006600;font-weight:bold;}
-.lingering_damage_magicka {background-color:#FF9900; color:#0000AA;font-weight:bold;}
-
-.damage_health {background-color:#FFFF66; color:#AA0000;font-weight:bold;}
-.damage_stamina {background-color:#FFFF66; color:#006600;font-weight:bold;}
-.damage_magicka {background-color:#FFFF66; color:#0000AA;font-weight:bold;}
-
-
-
-
-
-
-.weakness_to_frost,
-.weakness_to_poison,
-.weakness_to_magic,
-.weakness_to_fire,
-.weakness_to_shock {background-color:#FF99CC;}
-
-/*.weakness_to_poison {}
-.weakness_to_magic {}
-.weakness_to_fire {}
-.weakness_to_shock {}*/
-
-
-.paralysis,
-.invisibility,
-.fear,
-.slow,
-.frenzy,
-.waterbreathing,
-.cure_disease{background-color:#999999;}
-
-/* .invisibility {}
-.fear {}
-.slow {}
-.frenzy {}
-.waterbreathing {}
-.cure_disease {} */
+.messeage{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	width: 100%;
+	height: 3em;
+	line-height: 3em;
+	text-align: center;
+	background: #333;
+}

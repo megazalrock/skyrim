@@ -20,7 +20,7 @@ class App extends React.Component{
 			searchMode: 'or'
 		};	
 		superagent
-			.get('ingredients.csv')
+			.get('data/ingredients.csv')
 			.end((err, res) => {
 				if(_.isNull(err)){
 					var ingredients = csv2json(res.text);
@@ -32,7 +32,7 @@ class App extends React.Component{
 			});
 
 		superagent
-			.get('effects.json')
+			.get('data/effects.json')
 			.end((err, res) =>{
 				if(_.isNull(err)){
 					this.setState({
@@ -90,6 +90,45 @@ class App extends React.Component{
 
 	}
 
+	convertEffectNameToClassName(effect){
+		var result = [];
+		var classNameList = [
+			'health',
+			'stamina',
+			'magicka',
+			'ravage',
+			'damage',
+			'lingering damage',
+			'restore',
+			'resist',
+			'fortify',
+			'regen',
+			'weakness'
+		];
+
+		var efficacy = [
+			'paralysis',
+			'invisibility',
+			'fear',
+			'slow',
+			'frenzy',
+			'waterbreathing',
+			'cure disease',
+		];
+
+		effect = effect.toLowerCase();
+
+		if(_.includes(efficacy, effect)){
+			return 'efficacy';
+		}
+
+		result = _.filter(classNameList, (part) => {
+			return _.includes(effect, part)
+		});
+		result = _.map(result, _.snakeCase);
+		return result.join(' ');
+	}
+
 	render(){
 		return(
 			<div className="main">
@@ -100,12 +139,14 @@ class App extends React.Component{
 					onDeselectAll={this.handleDeslectAll.bind(this)}
 					searchMode={this.state.searchMode}
 					onChangeMode={this.handleModeChange.bind(this)}
+					convertEffectNameToClassName={this.convertEffectNameToClassName}
 				/>
 				<IngredientsList
 					selectedEffects={this.state.selectedEffects}
 					visibleIngredients={this.state.visibleIngredients}
 					ingredients={this.state.ingredients}
 					onSelectedEffectsChange={this.handleSelectedEffectsChange.bind(this)}
+					convertEffectNameToClassName={this.convertEffectNameToClassName}
 				/>
 			</div>
 		);

@@ -9,9 +9,9 @@
 		"Weakness": [
 			"Weakness to Fire",
 			"Weakness to Frost",
+			"Weakness to Shock",
 			"Weakness to Magic",
-			"Weakness to Poison",
-			"Weakness to Shock"
+			"Weakness to Poison"
 		],
 		"Damage": [
 			"Lingering Damage Health",
@@ -22,8 +22,8 @@
 			"Ravage Stamina",
 			"Damage Health",
 			"Damage Magicka",
-			"Damage Magicka Regen",
 			"Damage Stamina",
+			"Damage Magicka Regen",
 			"Damage Stamina Regen"
 		]
 	},
@@ -36,40 +36,46 @@
 		"Resist": [
 			"Resist Fire",
 			"Resist Frost",
+			"Resist Shock",
 			"Resist Magic",
-			"Resist Poison",
-			"Resist Shock"
+			"Resist Poison"
 		],
 		"Recovery": [
-			"Regenerate Health",
-			"Regenerate Magicka",
-			"Regenerate Stamina",
 			"Restore Health",
 			"Restore Magicka",
-			"Restore Stamina"
+			"Restore Stamina",
+			"Regenerate Health",
+			"Regenerate Magicka",
+			"Regenerate Stamina"
 		],
 		"Fortify": [
+			"Fortify Health",
+			"Fortify Magicka",
+			"Fortify Stamina",
+
 			"Fortify Alteration",
-			"Fortify Barter",
-			"Fortify Block",
-			"Fortify Carry Weight",
 			"Fortify Conjuration",
 			"Fortify Destruction",
-			"Fortify Enchanting",
-			"Fortify Health",
-			"Fortify Heavy Armor",
 			"Fortify Illusion",
-			"Fortify Light Armor",
-			"Fortify Lockpicking",
-			"Fortify Magicka",
-			"Fortify Marksman",
-			"Fortify One-Handed",
-			"Fortify Pickpocket",
 			"Fortify Restoration",
+
+			"Fortify One-Handed",
+			"Fortify Two-Handed",
+			"Fortify Marksman",
+
+			"Fortify Block",
+			"Fortify Light Armor",
+			"Fortify Heavy Armor",
+
 			"Fortify Smithing",
+			"Fortify Enchanting",
+
+			"Fortify Pickpocket",
+			"Fortify Lockpicking",
 			"Fortify Sneak",
-			"Fortify Stamina",
-			"Fortify Two-Handed"
+
+			"Fortify Barter",
+			"Fortify Carry Weight"
 		]
 	}
 }

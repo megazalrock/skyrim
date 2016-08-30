@@ -20,7 +20,7 @@ import gzip from "gulp-gzip";
 import notifier from "node-notifier";
 import notify from "gulp-notify";
 
-var autoprefix = new LessPluginAutoprefix({browsers: ['last 2 versions']});
+var autoprefix = new LessPluginAutoprefix({browsers: ['last 2 versions', 'iOS 8.1']});
 var dirnameRegExp = new RegExp(__dirname + '/', 'g');
 
 const setting = {
