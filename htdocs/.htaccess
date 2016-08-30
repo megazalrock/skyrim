@@ -43,3 +43,11 @@ RewriteRule .+ %{REQUEST_URI}.gz
     ForceType text/comma-separated-values
     AddEncoding x-gzip .gz
 </FilesMatch>
+
+<Files ~ ".(json|json\.gz|csv|csv\.gz)$">
+	Header set Cache-Control "max-age=604800, public"
+</Files>
+
+<Files ~ ".(js|js\.gz|css|css\.gz|html)$">
+	Header set Cache-Control "max-age=86400, public"
+</Files>
