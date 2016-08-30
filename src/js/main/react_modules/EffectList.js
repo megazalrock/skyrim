@@ -44,7 +44,7 @@ export default class EffectList extends React.Component{
 		if(_.isEmpty(this.props.effects)){
 			return (
 				<div className="effectsBox">
-					<div className="messeage">{t('Loading') + ' ' + t('Effect Lists')}</div>
+					<div className="messeage">{t('Loading')}</div>
 				</div>
 			);
 		}else{

@@ -1,0 +1,81 @@
+{
+	"Poison" : {
+		"Effect": [	
+			"Fear",
+			"Frenzy",
+			"Paralysis",
+			"Slow"
+		],
+		"Weakness": [
+			"Weakness to Fire",
+			"Weakness to Frost",
+			"Weakness to Shock",
+			"Weakness to Magic",
+			"Weakness to Poison"
+		],
+		"Damage": [
+			"Lingering Damage Health",
+			"Lingering Damage Magicka",
+			"Lingering Damage Stamina",
+			"Ravage Health",
+			"Ravage Magicka",
+			"Ravage Stamina",
+			"Damage Health",
+			"Damage Magicka",
+			"Damage Stamina",
+			"Damage Magicka Regen",
+			"Damage Stamina Regen"
+		]
+	},
+	"Potion": {
+		"Effect": [
+			"Invisibility",
+			"Cure Disease",
+			"Waterbreathing"
+		],
+		"Resist": [
+			"Resist Fire",
+			"Resist Frost",
+			"Resist Shock",
+			"Resist Magic",
+			"Resist Poison"
+		],
+		"Recovery": [
+			"Restore Health",
+			"Restore Magicka",
+			"Restore Stamina",
+			"Regenerate Health",
+			"Regenerate Magicka",
+			"Regenerate Stamina"
+		],
+		"Fortify": [
+			"Fortify Health",
+			"Fortify Magicka",
+			"Fortify Stamina",
+
+			"Fortify Alteration",
+			"Fortify Conjuration",
+			"Fortify Destruction",
+			"Fortify Illusion",
+			"Fortify Restoration",
+
+			"Fortify One-Handed",
+			"Fortify Two-Handed",
+			"Fortify Marksman",
+
+			"Fortify Block",
+			"Fortify Light Armor",
+			"Fortify Heavy Armor",
+
+			"Fortify Smithing",
+			"Fortify Enchanting",
+
+			"Fortify Pickpocket",
+			"Fortify Lockpicking",
+			"Fortify Sneak",
+
+			"Fortify Barter",
+			"Fortify Carry Weight"
+		]
+	}
+}

@@ -37,7 +37,8 @@ const setting = {
 		targets: [
 			'main'
 		]
-	}
+	},
+	resources: ['./data/**/*', './locales/**/*']
 };
 
 // JS setting start
@@ -178,9 +179,17 @@ gulp.task('buildCss', ['cleanCss'], () => {
 	});
 
 });
-
-gulp.task('default', ['cleanJs', 'watchJs', 'cleanCss', 'less'], () =>{
-	gulp.watch([setting.css.srcDir + '/**/*.less'], ['less']);
+//, 'local/**/*.*'
+gulp.task('gzipResources', () => {
+	gulp.src(setting.resources, {base: './'})
+		.pipe(gulp.dest('htdocs'))
+		.pipe(gzip())
+		.pipe(gulp.dest('htdocs'));
 });
 
-gulp.task('build', ['buildJs', 'buildCss']);
+gulp.task('default', ['cleanJs', 'watchJs', 'cleanCss', 'less', 'gzipResources'], () =>{
+	gulp.watch([setting.css.srcDir + '/**/*.less'], ['less']);
+	gulp.watch(setting.resources, ['gzipResources']);
+});
+
+gulp.task('build', ['buildJs', 'buildCss', 'gzipResources']);
