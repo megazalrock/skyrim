@@ -12,7 +12,6 @@ export default class IngredientsList extends React.Component{
 
 	handleSelectEffect(effect){
 		this.props.onSelectedEffectsChange(effect);
-		//console.log(effect);
 	}
 
 	getSelectedEffectClass(effect){

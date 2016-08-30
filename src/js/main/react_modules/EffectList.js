@@ -66,7 +66,6 @@ export default class EffectList extends React.Component{
 				});
 				return Effects;
 			};
-			//console.log(this.state.isPotionHidden);
 
 			return (
 				<div className="effectsBox">
