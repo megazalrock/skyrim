@@ -1,0 +1,45 @@
+#リクエストを全部index.htmlに
+# Redirect 301 /about.html http://bh.mgzl.jp/about
+
+# <ifModule mod_rewrite.c>
+# RewriteEngine On
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteCond %{REQUEST_URI} !index
+# RewriteCond %{REQUEST_URI} !.*\.(css|js|html|png)
+# RewriteRule (.*) / [L]
+# </ifModule>
+
+#jsとcssをgzipで
+<ifModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{HTTP:Accept-Encoding} gzip
+RewriteCond %{REQUEST_FILENAME} !\.gz$
+RewriteCond %{REQUEST_FILENAME}\.gz -s
+RewriteCond %{REQUEST_FILENAME} \.js$ [OR]
+RewriteCond %{REQUEST_FILENAME} \.css$ [OR]
+RewriteCond %{REQUEST_FILENAME} \.csv$ [OR]
+RewriteCond %{REQUEST_FILENAME} \.json$
+RewriteRule .+ %{REQUEST_URI}.gz
+</ifModule>
+ 
+<FilesMatch "\.js\.gz$">
+    ForceType application/x-javascript
+    AddEncoding x-gzip .gz  
+</FilesMatch>
+ 
+<FilesMatch "\.css\.gz$">
+    ForceType text/css
+    AddEncoding x-gzip .gz
+</FilesMatch>
+
+ 
+<FilesMatch "\.json\.gz$">
+    ForceType application/json
+    AddEncoding x-gzip .gz  
+</FilesMatch>
+ 
+<FilesMatch "\.csv\.gz$">
+    ForceType text/comma-separated-values
+    AddEncoding x-gzip .gz
+</FilesMatch>
